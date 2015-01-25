@@ -9,7 +9,7 @@ NEI <- tbl_df(NEI)                               # convert to dplyr data frame
 data <- group_by(NEI, year)                      # group the data by year
                                                  # sum the emissions values and divide
                                                  # by 1 million for easier visual
-data <- summarize(data, emissions=sum(Emissions)/1000000)
+data <- summarize(data, emissions = sum(Emissions)/1000000)
 
 png("plot1.png", width=480, height=480)          # set the PNG device for plotting
 

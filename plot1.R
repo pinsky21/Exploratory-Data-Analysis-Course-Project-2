@@ -23,4 +23,4 @@ barplot(data$emissions,
 
 dev.off()                                        # close the png device
 
-rm(list=ls())
+# rm(list=ls())

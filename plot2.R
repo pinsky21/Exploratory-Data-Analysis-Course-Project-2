@@ -8,11 +8,11 @@ NEI <- tbl_df(NEI)                               # convert to dplyr data frame
 
 data <- filter(NEI, fips == "24510")             # get only Baltimore data
 data <- group_by(data, year)                     # group the data by year
-# sum the emissions values and divide
-# by 1 million for easier visual
+                                                 # sum the emissions values and divide
+                                                 # by 1 thousand for easier visual
 data <- summarize(data, emissions = sum(Emissions)/1000)
 
-png("plot2.png", width=480, height=480)         # set the PNG device for plotting
+png("plot2.png", width=480, height=480)          # set the PNG device for plotting
 
 barplot(data$emissions, 
         names.arg = data$year, 
@@ -22,6 +22,6 @@ barplot(data$emissions,
         col = "lightskyblue"
 )
 
-dev.off()                                       # close the png device
+dev.off()                                        # close the png device
 
 rm(list=ls())

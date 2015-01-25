@@ -18,7 +18,7 @@ data$year <- as.character(data$year)                # convert year values to cha
 png("plot3.png", width=640, height=480)          # set the PNG device for plotting
 
 g <- ggplot(data, aes(year, Emissions, group = 1)) +
-        geom_bar(stat = "identity", fill = "lightskyblue") +
+        geom_bar(stat = "identity", fill = "lightskyblue", color="darkgray") +
         geom_smooth(method = "lm", alpha = 0) +
         facet_grid(~ type) +
         labs(x = "Year", y = "Total Emissions (tons)") + 
